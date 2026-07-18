@@ -196,4 +196,116 @@ O projeto está organizado conforme as principais etapas de uma análise de dado
 
 ---
 
+# Principais funções do Pandas
+
+## 📌 Conhecendo o DataFrame
+
+| Função | Serve para |
+|---|---|
+| `df.head()` | Mostra as primeiras 5 linhas do DataFrame |
+| `df.tail()` | Mostra as últimas 5 linhas |
+| `df.shape` | Mostra quantidade de linhas e colunas `(linhas, colunas)` |
+| `df.columns` | Mostra os nomes das colunas |
+| `df.info()` | Mostra informações das colunas, tipos de dados e valores vazios |
+| `df.describe()` | Mostra estatísticas das colunas numéricas |
+| `df.dtypes` | Mostra o tipo de cada coluna |
+
+---
+
+# 🔎 Selecionar dados
+
+| Função | Serve para |
+|---|---|
+| `df["coluna"]` | Seleciona uma coluna |
+| `df[["col1", "col2"]]` | Seleciona várias colunas |
+| `df.loc[]` | Seleciona usando nomes ou condições |
+| `df.iloc[]` | Seleciona usando posição (índice numérico) |
+
+---
+
+# 🔍 Filtrar dados
+
+| Função | Serve para |
+|---|---|
+| `df[df["coluna"] == valor]` | Filtra valores iguais |
+| `df[df["coluna"] > valor]` | Filtra valores maiores |
+| `df[df["coluna"] < valor]` | Filtra valores menores |
+| `df.isnull()` | Verifica valores vazios |
+| `df.notnull()` | Verifica valores preenchidos |
+
+---
+
+# 📊 Estatísticas
+
+| Função | Serve para |
+|---|---|
+| `.mean()` | Calcula a média |
+| `.median()` | Calcula a mediana |
+| `.mode()` | Encontra o valor mais frequente |
+| `.sum()` | Soma valores |
+| `.count()` | Conta valores existentes |
+| `.min()` | Retorna o menor valor |
+| `.max()` | Retorna o maior valor |
+| `.std()` | Calcula o desvio padrão |
+
+---
+
+# 🔢 Contagem e porcentagem
+
+| Função | Serve para |
+|---|---|
+| `len()` | Conta quantidade de elementos/linhas |
+| `value_counts()` | Conta quantas vezes cada valor aparece |
+| `value_counts(normalize=True)` | Calcula proporções/percentuais |
+| `.unique()` | Mostra valores únicos |
+| `.nunique()` | Conta quantos valores únicos existem |
+
+---
+
+# 🛠️ Criar e modificar colunas
+
+| Função | Serve para |
+|---|---|
+| `df["nova_coluna"] = ...` | Cria uma nova coluna |
+| `.apply()` | Aplica uma função em cada valor |
+| `.map()` | Mapeia/substitui valores |
+| `.replace()` | Troca valores específicos |
+
+---
+
+# 🧹 Limpeza de dados
+
+| Função | Serve para |
+|---|---|
+| `dropna()` | Remove linhas com valores vazios |
+| `fillna()` | Preenche valores vazios |
+| `drop()` | Remove linhas ou colunas |
+| `duplicated()` | Identifica valores duplicados |
+| `drop_duplicates()` | Remove duplicados |
+
+---
+
+# 🔄 Ordenação
+
+| Função | Serve para |
+|---|---|
+| `sort_values()` | Ordena pelos valores de uma coluna |
+| `sort_index()` | Ordena pelo índice |
+
+---
+
+# 👥 Agrupamento
+
+| Função | Serve para |
+|---|---|
+| `groupby()` | Agrupa dados por categoria |
+| `agg()` | Executa vários cálculos ao mesmo tempo |
+
+Exemplo:
+
+```python
+df.groupby("sex")["age"].mean()
+
+
+```
 **Última atualização:** Julho 2026
